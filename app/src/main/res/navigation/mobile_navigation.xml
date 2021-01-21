@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.faisal.docbook.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_documents"
+        android:name="com.faisal.docbook.ui.doc.DocFragment"
+        android:label="@string/documents"
+        tools:layout="@layout/fragment_doc" >
+        <action
+            android:id="@+id/action_nav_documents_to_docAddFragment"
+            app:destination="@id/docAddFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_credentials"
+        android:name="com.faisal.docbook.ui.credentials.CredentialsFragment"
+        android:label="@string/credentials"
+        tools:layout="@layout/fragment_credentials" >
+        <action
+            android:id="@+id/action_nav_credentials_to_credentialsAddFragment"
+            app:destination="@id/credentialsAddFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_links"
+        android:name="com.faisal.docbook.ui.links.LinksFragment"
+        android:label="@string/Links"
+        tools:layout="@layout/fragment_links" >
+        <action
+            android:id="@+id/action_nav_links_to_linksAddFragment"
+            app:destination="@id/linksAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.faisal.docbook.ui.note.NoteFragment"
+        android:label="@string/notes"
+        tools:layout="@layout/fragment_note" >
+        <action
+            android:id="@+id/action_nav_notes_to_noteAddFragment"
+            app:destination="@id/noteAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linksAddFragment"
+        android:name="com.faisal.docbook.ui.linksadd.LinksAddFragment"
+        tools:layout="@layout/fragment_links_add"
+        android:label="LinksAddFragment" />
+    <fragment
+        android:id="@+id/docAddFragment"
+        android:name="com.faisal.docbook.ui.docadd.DocAddFragment"
+        tools:layout="@layout/fragment_doc_add"
+        android:label="DocAddFragment" />
+    <fragment
+        android:id="@+id/credentialsAddFragment"
+        tools:layout="@layout/fragment_credentials_add"
+        android:name="com.faisal.docbook.ui.credentialsadd.CredentialsAddFragment"
+        android:label="CredentialsAddFragment" />
+    <fragment
+        android:id="@+id/noteAddFragment"
+        tools:layout="@layout/fragment_note_add"
+        android:name="com.faisal.docbook.ui.noteadd.NoteAddFragment"
+        android:label="NoteAddFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        tools:layout="@layout/fragment_settings"
+        android:name="com.faisal.docbook.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
